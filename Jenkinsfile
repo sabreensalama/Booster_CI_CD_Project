@@ -6,6 +6,7 @@ pipeline {
             registryCredential = "dockerhub"
 
     }
+    stages {
 
 
         stage('build image') {
@@ -18,7 +19,6 @@ pipeline {
         }
 
         stage('push image for nexus') {
-
             steps {
               sh "docker tag  $registry "
               sh "docker login $registryCredential"
