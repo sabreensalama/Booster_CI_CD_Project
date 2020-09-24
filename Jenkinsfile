@@ -18,12 +18,14 @@ pipeline {
             }
         }
 
-        stage('push image for nexus') {
             steps {
-              sh "docker login $registryCredential"
-              sh "docker push $registry"
-
+                script{
+                     docker.withRegistry( '', registryCredential ) {
+                        sh "docker push $registry"
+                     }
+                }
             }
         }
+
     }
 }
