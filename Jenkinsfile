@@ -31,7 +31,7 @@ pipeline {
         stage ('run app'){
 
             steps {
-               sh "docker run -it -p 8000:8000 $registry"
+               sh "docker run -d -p 8010:8000 $registry"
             }
         }
 
