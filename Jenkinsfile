@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage ('push image'){
+        stage ('run app'){
 
             steps {
                sh "docker run -it -p 8000:8000 $registry"
