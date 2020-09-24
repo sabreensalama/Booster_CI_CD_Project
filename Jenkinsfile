@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'slave01'}
  
     environment {
             registry = "sabreensalama/simple-djangoa-pp:latest"
