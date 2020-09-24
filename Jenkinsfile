@@ -27,6 +27,15 @@ pipeline {
                 }
             }
         }
+
+        stage ('push image'){
+
+            steps {
+               sh "docker run -it -p 8000:8000 $registry"
+            }
+        }
+
+        
         
 
     }
