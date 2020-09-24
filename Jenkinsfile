@@ -20,7 +20,6 @@ pipeline {
 
         stage('push image for nexus') {
             steps {
-              sh "docker tag  $registry "
               sh "docker login $registryCredential"
               sh "docker push $registry"
 
