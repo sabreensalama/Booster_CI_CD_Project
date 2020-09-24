@@ -51,3 +51,10 @@ Create CI/CD pipeline using jenkinsfile to deploy simple django web app as a mic
   start the server:
 
       python3.6 manage.py runserver 0.0.0.0:8000
+      
+      
+ # Outputs
+ ![pipline](https://github.com/sabreensalama/Booster_CI_CD_Project/blob/master/Screenshots/pipline.png)
+ ![my django app](https://github.com/sabreensalama/Booster_CI_CD_Project/blob/master/Screenshots/app.png)
+
+
