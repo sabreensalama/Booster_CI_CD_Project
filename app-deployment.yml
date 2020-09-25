@@ -27,7 +27,7 @@ spec:
         readinessProbe:
             httpGet:
                path: /
-               port: 32000
+               port: 8000
             initialDelaySeconds: 5
             periodSeconds: 5
             successThreshold: 1
