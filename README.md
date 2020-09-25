@@ -67,4 +67,5 @@ Create CI/CD pipeline using jenkinsfile to deploy simple django web app as a mic
 
   ![monitor](https://github.com/sabreensalama/Booster_CI_CD_Project/blob/master/Screenshots/monitor.png)
 
+  ![slack notification](https://github.com/sabreensalama/Booster_CI_CD_Project/blob/master/Screenshots/slack.png)
 
