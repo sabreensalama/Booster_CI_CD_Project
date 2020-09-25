@@ -8,7 +8,13 @@ Create CI/CD pipeline using jenkinsfile to deploy simple django web app as a mic
 
 2- write dockerfile inside the forked repo to create new image from base image ubuntu and install python3.6 and pip3 and copy the source code files of the app to this image and configure it to start the server when creating container (check the below section for steps to start the django server) 
 
-3- configure ubuntu slave to use it for the pipeline
+3- Setup Jenkins Master and Slave
+      1- setup jenkins in localmachine
+      2- su jenkins user
+      3- ssh-keygen
+      4- ssh-copy-id jenkins@3.83.3.211
+      5- install java on slave
+      6- create user jenkins
 
 4- create slck workspace and integrate it with jenkins
 
@@ -51,3 +57,10 @@ Create CI/CD pipeline using jenkinsfile to deploy simple django web app as a mic
   start the server:
 
       python3.6 manage.py runserver 0.0.0.0:8000
+      
+      
+ # Outputs
+ ![pipline](https://github.com/sabreensalama/Booster_CI_CD_Project/blob/master/Screenshots/pipline.png)
+ ![my django app](https://github.com/sabreensalama/Booster_CI_CD_Project/blob/master/Screenshots/app.png)
+
+
