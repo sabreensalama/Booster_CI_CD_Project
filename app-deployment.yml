@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: django-deployments
+  name: django-deployment
   labels:
     app: nginx
 spec:
