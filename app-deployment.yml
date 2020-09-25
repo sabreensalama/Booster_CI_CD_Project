@@ -24,10 +24,10 @@ spec:
         image: sabreensalama/simple-djangoa-pp:v2
         ports:
         - containerPort: 8000
-        readinessProbe:
-            httpGet:
-               path: /
-               port: 8000
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            successThreshold: 1
+        # readinessProbe:
+        #     httpGet:
+        #        path: /
+        #        port: 8000
+        #     initialDelaySeconds: 5
+        #     periodSeconds: 5
+        #     successThreshold: 1
