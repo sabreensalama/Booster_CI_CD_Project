@@ -31,8 +31,8 @@ pipeline {
         stage ('deploy app'){
 
             steps {
-               sh "sudo kubectl apply -f app-deployment.yml"
-               sh "sudo kubectl apply -f app-service.yml"
+               sh " sudo kubectl apply -f app-deployment.yml"
+               sh "sudo  kubectl apply -f app-service.yml"
 
             }
         }
