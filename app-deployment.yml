@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: simple-djangoa-pp
-        image: simple-djangoa-pp:latest
+        image: sabreensalama/simple-djangoa-pp:latest
         ports:
         - containerPort: 8000
