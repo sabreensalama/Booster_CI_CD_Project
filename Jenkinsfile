@@ -2,7 +2,7 @@ pipeline {
     agent {label 'slave01'}
  
     environment {
-            registry = "sabreensalama/simple-djangoa-pp:latest"
+            registry = "sabreensalama/simple-djangoa-pp:v2"
             registryCredential = "dockerhub"
 
     }

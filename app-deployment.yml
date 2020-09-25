@@ -1,11 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: django-deployment
+  name: django-deployments
   labels:
     app: nginx
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
   selector:
     matchLabels:
       app: django-app
@@ -16,6 +21,13 @@ spec:
     spec:
       containers:
       - name: simple-djangoa-pp
-        image: sabreensalama/simple-djangoa-pp:latest
+        image: sabreensalama/simple-djangoa-pp:v2
         ports:
         - containerPort: 8000
+        readinessProbe:
+            httpGet:
+               path: /
+               port: 32000
+               initialDelaySeconds: 5
+               periodSeconds: 5
+               successThreshold: 1

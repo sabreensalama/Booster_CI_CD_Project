@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python:3.7-buster
 # create workdir
 WORKDIR /app
 # copy the file requirements.txt  to the app directory
