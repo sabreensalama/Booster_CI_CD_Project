@@ -4,7 +4,7 @@ WORKDIR /app
 # copy the file requirements.txt  to the app directory
 COPY . /app/
 # install dependencies && make and apply  migrations for DB
-RUN  pip3 install -r requirements.txt && python3.6 manage.py makemigrations && python3.6 manage.py migrate
+RUN  pip3 install -r requirements.txt && python3.7 manage.py makemigrations && python3.7 manage.py migrate
 # Expose port
 EXPOSE 8000
 # start server
