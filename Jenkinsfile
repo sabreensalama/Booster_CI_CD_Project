@@ -28,10 +28,12 @@ pipeline {
             }
         }
 
-        stage ('run app'){
+        stage ('deploy app'){
 
             steps {
-               sh "docker run -d -p 8010:8000 $registry"
+               sh "sudo kubectl apply -f app-deployment.yml"
+               sh "sudo kubectl apply -f app-service.yml"
+
             }
         }
 
